@@ -400,6 +400,7 @@ func (ei *EnvInfo) GetDebugPort() int {
 
 // GetPortByURLKind returns the Port of a specific URL type, returns 0 if nil
 func (ei *EnvInfo) GetPortByURLKind(urlKind URLKind) (int, error) {
+	return 9080, nil
 	for _, localURL := range ei.GetURL() {
 		if localURL.Kind == urlKind {
 			return localURL.Port, nil
